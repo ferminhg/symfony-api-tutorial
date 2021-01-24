@@ -1,0 +1,3 @@
+healt-check:
+  path: /health-check
+  controller: Devaway\Controller\HealthCheck\HealthCheckGetController

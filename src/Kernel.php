@@ -1,15 +1,18 @@
 <?php
 
-namespace App;
+namespace Devaway;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
+use Symfony\Component\Routing\RouteCollectionBuilder;
 
 class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
+
+    private const CONFIG_EXTS = '.{xml,yaml}';
 
     protected function configureContainer(ContainerConfigurator $container): void
     {
@@ -24,15 +27,16 @@ class Kernel extends BaseKernel
         }
     }
 
+    public function getProjectDir(): string
+    {
+        return dirname(__DIR__);
+    }
+
     protected function configureRoutes(RoutingConfigurator $routes): void
     {
-        $routes->import('../config/{routes}/'.$this->environment.'/*.yaml');
-        $routes->import('../config/{routes}/*.yaml');
+        $confDir = $this->getProjectDir() . '/config';
 
-        if (is_file(\dirname(__DIR__).'/config/routes.yaml')) {
-            $routes->import('../config/routes.yaml');
-        } elseif (is_file($path = \dirname(__DIR__).'/config/routes.php')) {
-            (require $path)($routes->withPath($path), $this);
-        }
+        $routes->import($confDir. '/{routes}/'.$this->environment.'/*.yaml');
+        $routes->import($confDir. '/{routes}/*.yaml');
     }
 }
