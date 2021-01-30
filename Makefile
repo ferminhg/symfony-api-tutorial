@@ -35,8 +35,9 @@ composer composer-install composer-update composer-require composer-require-modu
 test: composer-env-file
 	docker exec devaway-wrappt-backend-php ./vendor/bin/phpunit tests/
 
-quality:
-	./vendor/bin/psalm
+.PHONY: static-analysis
+static-analysis: composer-env-file
+	docker exec devaway-wrappt-backend-php ./vendor/bin/psalm
 
 # 🐳 Docker Compose
 .PHONY: start
@@ -59,3 +60,7 @@ rebuild: composer-env-file
 	docker-compose build --pull --force-rm --no-cache
 	make deps
 	make start
+
+clean-cache:
+	@rm -rf app/*/*/var
+	@docker exec devaway-wrappt-backend-php ./bin/console cache:warmup
