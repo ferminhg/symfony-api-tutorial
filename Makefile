@@ -21,3 +21,6 @@ composer composer-install composer-update composer-require: composer-env-file
 .PHONY: test
 test: composer-env-file
 	./vendor/bin/phpunit tests/
+
+quality:
+	./vendor/bin/psalm
