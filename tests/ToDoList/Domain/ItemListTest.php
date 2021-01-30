@@ -16,7 +16,6 @@ class ItemListTest extends MockeryTestCase
         $item_list = ItemList::create($item_name);
 
         $this->assertEquals($item_name, $item_list->name);
-        $this->assertIsBool($item_list->isChecked);
-        $this->assertFalse($item_list->isChecked);
+        $this->assertFalse($item_list->isChecked());
     }
 }
