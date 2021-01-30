@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  backend:
+    container_name: devaway-wrappt-backend-php
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8030:8030"
+      - "9030:9001"
+    volumes:
+      - .:/app:delegated
+    command: symfony serve --dir=public --port=8030 --force-php-discovery

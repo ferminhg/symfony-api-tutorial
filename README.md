@@ -2,27 +2,30 @@
 
 Implementación de un ToDo list usando filosofia TDD y arquitectura hexagonal.
 
-## 🛠 Tools
+### 🐳 Needed tools
 
-Required:
-- Docker
-    - All the tools run in docker images
+1. [Install Docker](https://www.docker.com/get-started)
 
-Install dependencies
-```
-make composer-install
-```
+### ✅ Tests execution
 
-## Testing
+1. Install the dependencies if you haven't done it previously: `make deps`
+2. Execute PHPUnit and Behat tests: `make test`
 
 Libraries:
-- [Phpunit 8](https://phpunit.de/)
-- [Symfony 5](https://symfony.com/)
+1. [Phpunit 8](https://phpunit.de/)
+2. [Symfony 5](https://symfony.com/)
 
-How to run tests:
-```
-make test
-```
+### 🛠️ Environment configuration
 
-## 💎 Code quality tools
-- [Psalm](https://github.com/vimeo/psalm) 
+1. Create a local environment file (`cp .env .env.local`) if you want to modify any parameter
+
+### 🔥 Application execution
+
+1. Install all the dependencies and bring up the project with Docker executing: `make build`
+2. Then you'll have the app available:
+  1. [Backend](src): http://localhost:8030/health-check
+
+### 💎 Code quality tools
+
+1. Execute code quality tools `make quality`
+1. [Psalm](https://github.com/vimeo/psalm) 
