@@ -16,7 +16,7 @@ final class InMemorySymfonyEventBus implements EventBus
 {
     private MessageBus $bus;
 
-    public function __construct(iterable $subscribers)
+    public function __construct(iterable $subscribers = [])
     {
         $this->bus = new MessageBus(
             [
