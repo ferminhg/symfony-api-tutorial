@@ -1,0 +1,4 @@
+item-list-create:
+  path: /item-list/create/{name}
+  controller: Devaway\Controller\ItemList\ItemListController
+  methods: [GET]

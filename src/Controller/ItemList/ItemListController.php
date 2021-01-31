@@ -10,7 +10,7 @@ use Devaway\ToDoList\Domain\ItemName;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-final class ItemListPostController
+final class ItemListController
 {
 
     public function __construct(private ItemListCreator $creator)
