@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Devaway\Domain\Bus\Event;
-
+namespace Devaway\Shared\Domain\Bus\Event;
 
 interface EventBus
 {

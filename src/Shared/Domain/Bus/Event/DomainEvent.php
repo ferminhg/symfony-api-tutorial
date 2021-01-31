@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Devaway\Domain\Bus\Event;
+namespace Devaway\Shared\Domain\Bus\Event;
 
 use DateTimeImmutable;
 use Devaway\Shared\Domain\Utils;

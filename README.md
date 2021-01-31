@@ -18,6 +18,7 @@ Libraries:
 3. [PHP Doctrine Collections](https://www.doctrine-project.org/projects/collections.html)
 4. [The DependencyInjection Component](https://symfony.com/doc/current/components/dependency_injection.html)
 5. [Lambdish Phunctional](https://github.com/Lambdish/phunctional)
+6. [Symfony Messenger](https://symfony.com/doc/current/messenger.html)
 
 ### 🛠️ Environment configuration
 

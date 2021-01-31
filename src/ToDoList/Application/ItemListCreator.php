@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Devaway\ToDoList\Application;
 
-use Devaway\Domain\Bus\Event\EventBus;
+use Devaway\Shared\Domain\Bus\Event\EventBus;
 use Devaway\ToDoList\Domain\ItemList;
 use Devaway\ToDoList\Domain\ItemName;
 use Devaway\ToDoList\Domain\ListRepository;

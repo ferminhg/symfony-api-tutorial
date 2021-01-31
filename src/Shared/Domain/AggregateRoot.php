@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Devaway\Shared\Domain;
 
-use Devaway\Domain\Bus\Event\DomainEvent;
+use Devaway\Shared\Domain\Bus\Event\DomainEvent;
 
 abstract class AggregateRoot
 {
