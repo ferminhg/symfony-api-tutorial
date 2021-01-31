@@ -9,7 +9,9 @@ services:
     restart: unless-stopped
     ports:
       - "8030:8030"
-      - "9030:9001"
+    environment:
+      - APP_ENV=${APP_ENV}
+      - APP_SECRET=${APP_SECRET}
     volumes:
       - .:/app:delegated
     command: symfony serve --dir=public --port=8030 --force-php-discovery

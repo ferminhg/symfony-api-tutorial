@@ -12,8 +12,12 @@ Implementación de un ToDo list usando filosofia TDD y arquitectura hexagonal.
 2. Execute PHPUnit and Behat tests: `make test`
 
 Libraries:
-1. [Phpunit 8](https://phpunit.de/)
+
+1. [Phpunit](https://phpunit.de/)
 2. [Symfony 5](https://symfony.com/)
+3. [PHP Doctrine Collections](https://www.doctrine-project.org/projects/collections.html)
+4. [The DependencyInjection Component](https://symfony.com/doc/current/components/dependency_injection.html)
+5. [Lambdish Phunctional](https://github.com/Lambdish/phunctional)
 
 ### 🛠️ Environment configuration
 

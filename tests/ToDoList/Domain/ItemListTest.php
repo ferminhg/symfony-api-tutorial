@@ -12,7 +12,7 @@ class ItemListTest extends MockeryTestCase
 {
     public function test_create_valid_item():void
     {
-        $item_name = new ItemName("wopwop");
+        $item_name = new ItemName("wop wop");
         $item_list = ItemList::create($item_name);
 
         $this->assertEquals($item_name, $item_list->name);
