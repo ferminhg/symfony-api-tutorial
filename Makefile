@@ -35,8 +35,8 @@ composer composer-install composer-update composer-require composer-require-modu
 test: composer-env-file
 	docker exec devaway-wrappt-backend-php ./vendor/bin/phpunit tests/
 
-.PHONY: static-analysis
-static-analysis: composer-env-file
+.PHONY: quality
+quality: composer-env-file
 	docker exec devaway-wrappt-backend-php ./vendor/bin/psalm
 
 # 🐳 Docker Compose
